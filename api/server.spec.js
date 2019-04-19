@@ -51,3 +51,17 @@ describe('POST /videogames endpoint testing', () => {
         expect(res.type).toBe('application/json')
     })
 })
+
+describe('DELETE /videogames/:id endpoint testing', () => {
+    it('should return the item number deleted', async () => {
+        const res = await request(server).delete('/videogames/1')
+
+        expect(res.body).toEqual(1)
+    })
+
+    it('should return status code 200', async () => {
+        const res = await request(server).delete('/videogames/1')
+
+        expect(res.status).toBe(200)
+    })
+})

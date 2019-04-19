@@ -5,10 +5,10 @@ exports.seed = function(knex, Promise) {
     .then(function () {
       // Inserts seed entries
       return knex('videogames').insert([
-        {games: 'Fantasy7'},
-        {games: 'Fantasy8'},
-        {games: 'Fantasy9'},
-        {games: 'Nier Automata'}
+        {id: 1, games: 'Fantasy7'},
+        {id: 2, games: 'Fantasy8'},
+        {id: 3, games: 'Fantasy9'},
+        {id: 4, games: 'Nier Automata'}
       ]);
     });
 };

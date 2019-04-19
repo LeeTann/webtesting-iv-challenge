@@ -23,5 +23,12 @@ server.post('/videogames', async (req, res) => {
     res.status(201).json(result)
 })
 
+server.delete('/videogames/:id', async (req, res) => {
+    const {id} = req.params
+    const result = await db('videogames').where({id}).delete()
+
+    res.status(200).json(result)
+})
+
 
 module.exports = server
